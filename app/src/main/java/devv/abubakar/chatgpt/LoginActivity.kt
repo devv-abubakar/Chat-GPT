@@ -69,7 +69,7 @@ class LoginActivity : AppCompatActivity() {
                     showProgressDialogBox(
                         true,
                         "Login Successful!",
-                        "Please wait... \n You will be directed to the homepage"
+                         "Please wait... \n You will be directed to the homepage"
                     )
 
                 } else {
