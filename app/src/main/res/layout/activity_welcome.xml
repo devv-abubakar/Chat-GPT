@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context=".WelcomeActivity">
+
+
+    <ImageView
+        android:id="@+id/welcome_log"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="100dp"
+        android:contentDescription="@string/logo_desc"
+        android:src="@drawable/logo"
+        app:tint="@color/sea_green"
+        tools:ignore="ImageContrastCheck" />
+
+    <TextView
+        android:id="@+id/welcome_t1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:fontFamily="sans-serif-black"
+        android:text="@string/welcome_to"
+        android:textColor="@color/textColor"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/welcome_t2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:fontFamily="sans-serif-black"
+        android:text="@string/welcome_chatgpt"
+        android:textColor="@color/sea_green"
+        android:textSize="25sp"
+        tools:ignore="TextContrastCheck" />
+
+    <Button
+        android:id="@+id/btn_WelcomeToLogin"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="50dp"
+        android:backgroundTint="@color/primary_button_color"
+        android:fontFamily="sans-serif-black"
+        android:text="@string/log_in"
+        android:textColor="@color/primary_button_text_color"
+        tools:ignore="TextContrastCheck" />
+
+    <Button
+        android:id="@+id/btn_WelcomeToSignup"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="@color/secondary_button_color"
+        android:fontFamily="sans-serif-black"
+        android:text="@string/sign_up"
+        android:textColor="@color/secondary_button_text_color"
+        tools:ignore="TextContrastCheck" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/welcomeButtonLayout"
+            android:layout_centerHorizontal="true"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="40dp"
+            android:orientation="horizontal"
+            android:textAlignment="center">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:background="@color/stroke_color" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="8dp"
+                android:text="@string/welcome_or_continue_with"
+                android:textSize="14sp" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:background="@color/stroke_color" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/welcomeButtonLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginBottom="20dp"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/welcome_layout_google_login"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                app:cardBackgroundColor="@color/cardview_bg"
+                app:cardCornerRadius="24dp"
+                app:strokeColor="@color/stroke_color">
+
+                <ImageView
+                    android:id="@+id/welcome_google_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="12dp"
+                    android:contentDescription="@string/google_icon_desc"
+                    android:src="@drawable/google_icon" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/welcome_layout_apple_login"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                app:cardBackgroundColor="@color/cardview_bg"
+                app:cardCornerRadius="24dp"
+                app:strokeColor="@color/stroke_color">
+
+                <ImageView
+                    android:id="@+id/welcome_apple_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="12dp"
+                    android:contentDescription="@string/apple_icon_desc"
+                    android:src="@drawable/apple_icon" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/welcome_layout_facebook_login"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                app:cardBackgroundColor="@color/cardview_bg"
+                app:cardCornerRadius="24dp"
+                app:strokeColor="@color/stroke_color">
+
+                <ImageView
+                    android:id="@+id/welcome_facebook_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="12dp"
+                    android:contentDescription="@string/facebook_icon_desc"
+                    android:src="@drawable/facebook_icon" />
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "158701311631",
+    "project_id": "devv-abubakar-chatgpt",
+    "storage_bucket": "devv-abubakar-chatgpt.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:158701311631:android:27888b4b8d693a440c42fa",
+        "android_client_info": {
+          "package_name": "devv.abubakar.chatgpt"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDyYLkDzkHZpi2BM7nSPdVQZSlLftylRL4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="textColor">#FF000000</color>
+    <color name="hintColor">#80000000</color>
+
+    <color name="sea_green">#17CE92</color>
+    <color name="light_sea_green">#e8faf4</color>
+    <color name="stroke_color">#f2f2f1</color>
+    <color name="cardview_bg">#FFFFFFFF</color>
+
+    <color name="primary_button_color">#17ce92</color>
+    <color name="primary_button_text_color">#FFFFFFFF</color>
+    <color name="secondary_button_color">#e8faf4</color>
+    <color name="secondary_button_text_color">#17ce92</color>
+
+
+</resources>
