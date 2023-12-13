@@ -36,8 +36,8 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
-    viewBinding{
-        enable=true
+    viewBinding {
+        enable = true
     }
 }
 
@@ -51,4 +51,6 @@ dependencies {
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
+
+    implementation("com.airbnb.android:lottie:3.4.0")
 }

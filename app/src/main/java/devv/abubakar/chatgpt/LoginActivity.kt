@@ -18,7 +18,7 @@ import com.google.firebase.auth.FirebaseAuth
 import devv.abubakar.chatgpt.databinding.ActivityLoginBinding
 
 @Suppress("DEPRECATION")
-class LoginActivity : AppCompatActivity() {
+open class LoginActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityLoginBinding
     private lateinit var firebaseAuth: FirebaseAuth
@@ -38,6 +38,10 @@ class LoginActivity : AppCompatActivity() {
             val intent = Intent(this, SignUpActivity::class.java)
             startActivity(intent)
             finish()
+        }
+        binding.loginForgotPasswordText.setOnClickListener {
+            val intent = Intent(this, ForgotPasswordActivity::class.java)
+            startActivity(intent)
         }
     }
 
@@ -69,7 +73,7 @@ class LoginActivity : AppCompatActivity() {
                     showProgressDialogBox(
                         true,
                         "Login Successful!",
-                         "Please wait... \n You will be directed to the homepage"
+                        "Please wait... \n You will be directed to the homepage"
                     )
 
                 } else {

@@ -20,7 +20,7 @@
     <string name="confirm_password">Confirm Password</string>
     <string name="confirm">Confirm</string>
     <string name="already_have_an_account">Already have an account? </string>
-    <string name="signup_dialoguebox_successful_message">Please wait... \nYou will be directed to the homepage</string>
+    <string name="signup_dialoguebox_successful_message">Please wait… \nYou will be directed to the homepage</string>
     <string name="sign_up_dialogue_successful_title">Sign up Successful!</string>
     <string name="i_agree_to">I agree to</string>
     <string name="terms_amp_privacy_policy"><![CDATA[Terms & Privacy Policy]]></string>
@@ -29,4 +29,7 @@
     <string name="login_text2"><![CDATA[Please enter your email & password to login]]></string>
     <string name="remember_me">Remember me</string>
     <string name="forgot_password">Forgot Password?</string>
+    <string name="reset_your_password_t1">Reset your password</string>
+    <string name="forget_password_activity_t2">Please enter your email and we will send an OTP code in the next step to reset you password.</string>
+    <string name="reset">Reset</string>
 </resources>

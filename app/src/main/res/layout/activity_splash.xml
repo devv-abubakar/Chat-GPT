@@ -8,12 +8,13 @@
     android:orientation="vertical"
     tools:context=".Splash">
 
-    <ImageView
+    <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/splash_logo"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
         android:contentDescription="@string/logo_desc"
-        android:src="@drawable/logo"
+        app:lottie_autoPlay="true"
+        app:lottie_rawRes="@raw/chatgpt_animation"
         app:tint="@color/sea_green"
         tools:ignore="ImageContrastCheck" />
 
@@ -21,7 +22,6 @@
         android:id="@+id/splash_appName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="20dp"
         android:fontFamily="sans-serif-black"
         android:text="@string/app_name"
         android:textSize="30sp" />
