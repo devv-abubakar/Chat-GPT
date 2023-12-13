@@ -77,6 +77,7 @@ open class LoginActivity : AppCompatActivity() {
                     )
 
                 } else {
+                    binding.loginProgressBar.visibility = View.GONE
                     showProgressDialogBox(
                         false,
                         "Login Failed!",

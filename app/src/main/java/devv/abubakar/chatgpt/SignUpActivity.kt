@@ -85,6 +85,7 @@ class SignUpActivity : AppCompatActivity() {
                     binding.signupProgressBar.visibility = View.GONE
 
                 } else {
+                    binding.signupProgressBar.visibility = View.GONE
                     showProgressDialogBox(
                         false,
                         "Sign up Failed!",
