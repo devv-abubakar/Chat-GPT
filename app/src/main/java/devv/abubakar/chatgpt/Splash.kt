@@ -1,3 +1,5 @@
+@file:Suppress("DEPRECATION")
+
 package devv.abubakar.chatgpt
 
 import android.content.Intent

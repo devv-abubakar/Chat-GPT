@@ -32,4 +32,9 @@
     <string name="reset_your_password_t1">Reset your password</string>
     <string name="forget_password_activity_t2">Please enter your email and we will send an OTP code in the next step to reset you password.</string>
     <string name="reset">Reset</string>
+    <string name="enter_your_query">Enter your query</string>
+    <string name="sample_user_question">Hello, How are you!</string>
+    <string name="sample_time">8:30 PM</string>
+    <string name="don_t_have_an_account">Don\'t have an account?</string>
+    <string name="dialogue_image">Dialogue_Image</string>
 </resources>

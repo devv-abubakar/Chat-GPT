@@ -14,8 +14,13 @@ import android.view.View
 import android.widget.ProgressBar
 import android.widget.TextView
 import android.widget.Toast
+import com.google.firebase.Firebase
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.database
 import devv.abubakar.chatgpt.databinding.ActivitySignUpBinding
+
 
 @Suppress("DEPRECATION")
 class SignUpActivity : AppCompatActivity() {
@@ -25,14 +30,21 @@ class SignUpActivity : AppCompatActivity() {
     private lateinit var userSignupEmail: String
     private lateinit var userSignupPassword: String
     private val handler = Handler()
+    private lateinit var database: FirebaseDatabase
+    private lateinit var myRef: DatabaseReference
+    private val auth = FirebaseAuth.getInstance()
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivitySignUpBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        firebaseAuth = FirebaseAuth.getInstance()
+        database = Firebase.database
+        myRef = database.getReference("Users")
 
+
+        firebaseAuth = FirebaseAuth.getInstance()
 
         binding.btnSignupConfirm.setOnClickListener {
             signUp()
@@ -76,6 +88,11 @@ class SignUpActivity : AppCompatActivity() {
         firebaseAuth.createUserWithEmailAndPassword(userSignupEmail, userSignupPassword)
             .addOnCompleteListener {
                 if (it.isSuccessful) {
+
+                    addUsertoFirebase(
+                        auth.currentUser!!.uid,
+                        userSignupEmail
+                    )
                     showProgressDialogBox(
                         true,
                         "Sign up Successful!",
@@ -93,6 +110,12 @@ class SignUpActivity : AppCompatActivity() {
                     )
                 }
             }
+    }
+
+    private fun addUsertoFirebase(userID: String, userEmailAddress: String) {
+        val userData = User(userID, userEmailAddress)
+        myRef.child(userID).setValue(userData)
+
     }
 
     @SuppressLint("ResourceAsColor")
