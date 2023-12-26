@@ -43,7 +43,7 @@ class HomeActivity : AppCompatActivity() {
     private val auth = FirebaseAuth.getInstance()
 
     companion object {
-        private const val API_KEY = "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"
+        private const val API_KEY = "Enter your api key here"
         private const val API_URL = "https://api.openai.com/v1/completions"
         private const val MODEL_NAME = "text-davinci-003"
     }
