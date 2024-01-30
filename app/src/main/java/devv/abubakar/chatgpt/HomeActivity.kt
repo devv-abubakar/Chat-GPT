@@ -43,9 +43,9 @@ class HomeActivity : AppCompatActivity() {
     private val auth = FirebaseAuth.getInstance()
 
     companion object {
-        private const val API_KEY = "Enter your api key here"
+        private const val API_KEY = "your api key"
         private const val API_URL = "https://api.openai.com/v1/completions"
-        private const val MODEL_NAME = "text-davinci-003"
+        private const val MODEL_NAME = "gpt-3.5-turbo-instruct"
     }
 
     @SuppressLint("SetTextI18n", "NotifyDataSetChanged")
@@ -169,7 +169,11 @@ class HomeActivity : AppCompatActivity() {
                                 if (jsonArray.length() > 0) {
                                     val textResult =
                                         jsonArray.getJSONObject(0).optString("text", "")
-                                    callback(textResult)
+
+                                    // Use runOnUiThread to update the UI
+                                    runOnUiThread {
+                                        callback(textResult)
+                                    }
 
                                 } else {
                                     Log.e("JSON Error", "'choices' array is empty.")
