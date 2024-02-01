@@ -4,12 +4,15 @@ package devv.abubakar.chatgpt
 
 import android.annotation.SuppressLint
 import android.content.Context
+import android.os.Build
 import android.os.Bundle
 import android.util.Log
+import android.view.Window
 import android.view.inputmethod.EditorInfo
 import android.view.inputmethod.InputMethodManager
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.textfield.TextInputEditText
@@ -43,7 +46,7 @@ class HomeActivity : AppCompatActivity() {
     private val auth = FirebaseAuth.getInstance()
 
     companion object {
-        private const val API_KEY = "your api key"
+        private const val API_KEY = "Your API Key"
         private const val API_URL = "https://api.openai.com/v1/completions"
         private const val MODEL_NAME = "gpt-3.5-turbo-instruct"
     }
@@ -97,6 +100,16 @@ class HomeActivity : AppCompatActivity() {
             }
             false
         })
+
+
+        changeStatusBarColor("#17CE92")
+    }
+
+    private fun changeStatusBarColor(colorCode: String) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            window.statusBarColor = ContextCompat.getColor(this, android.R.color.transparent)
+            window.statusBarColor = android.graphics.Color.parseColor(colorCode)
+        }
     }
 
     private fun showChat() {

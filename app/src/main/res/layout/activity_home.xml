@@ -6,13 +6,33 @@
     tools:context=".MainActivity">
 
 
+    <RelativeLayout
+        android:id="@+id/top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/sea_green"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15sp"
+            android:fontFamily="sans-serif"
+            android:text="@string/app_name"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+
+    </RelativeLayout>
+
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/chatRecyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@+id/idTILQuery"
-        android:layout_alignParentTop="true" />
+        android:layout_below="@id/top_layout" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/idTILQuery"
@@ -27,8 +47,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/question_input_bg"
-            android:imeOptions="actionSend"
             android:hint="@string/enter_your_query"
+            android:imeOptions="actionSend"
             android:importantForAutofill="no"
             android:inputType="text|textEnableTextConversionSuggestions"
             android:textColor="@color/black" />
